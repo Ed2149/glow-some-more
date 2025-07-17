@@ -1,0 +1,64 @@
+/* Framework: Bootstrap based — with custom glam */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fef5f9;
+  color: #333;
+}
+
+.text-pink {
+  color: #e91e63;
+}
+
+.btn-pink {
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-pink:hover {
+  background-color: #d81b60;
+  transform: scale(1.02);
+}
+
+.btn-outline-pink {
+  border: 2px solid #e91e63;
+  color: #e91e63;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-pink:hover {
+  background-color: #e91e63;
+  color: white;
+  transform: scale(1.02);
+}
+
+.form-control {
+  border-radius: 25px;
+  border: 1px solid #e91e63;
+  padding: 12px 18px;
+}
+
+.form-floating > label {
+  color: #e91e63;
+  font-weight: 500;
+}
+
+.container {
+  box-shadow: 0 4px 20px rgba(233, 30, 99, 0.2);
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+/* Optional: add a subtle animation on page load */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+  animation: fadeInUp 0.6s ease-out;
+}

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GlowSomeMore Cosmetics</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body style="font-family: 'Cinzel Decorative', serif;">
+
+  <div id="backgroundCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="slide1.jpeg" class="bg-slide" alt="Lipstick Vibe" />
+      </div>
+      <div class="carousel-item">
+        <img src="slide2.jpg" class="bg-slide" alt="Glowing Skincare" />
+      </div>
+      <div class="carousel-item">
+        <img src="slide3.jpg" class="bg-slide" alt="Beauty Layout" />
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm">
+    <div class="container">
+      <a class="navbar-brand text-pink fw-bold" href="#"><span class="fs-4">💖 GlowSomeMore</span></a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navbarNav" class="collapse navbar-collapse justify-content-end">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link text-pink" href="#categories">Shop</a></li>
+          <li class="nav-item"><a class="nav-link text-pink" href="#skincare-showcase">Skincare</a></li>
+          <li class="nav-item"><a class="nav-link text-pink" href="#testimonials">Reviews</a></li>
+          <li class="nav-item"><a class="nav-link text-pink" href="#contact">Contact</a></li>
+          <li class="nav-item">
+  <a class="nav-link text-pink position-relative" href="#cart">
+    🛒 Cart <span id="cartCount" class="badge bg-pink position-absolute top-0 start-100 translate-middle">0</span>
+  </a>
+</li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="text-white text-center py-5 header-bg">
+    <h1 style="font-family: 'Playfair Display', serif;">Unleash Your Inner Glow 💫</h1>
+    <p class="fs-5">Gentle. Gorgeous. Glowing skin starts here.</p>
+    <a href="#categories" class="btn btn-light btn-lg mt-3 rounded-pill">Explore Products</a>
+  </header>
+<div class="text-center mb-3">
+  <input type="text" id="productSearch" class="form-control" placeholder="Search products...">
+</div>
+
+  <section id="categories" class="container py-5" data-aos="fade-up">
+    <h2 class="text-center text-pink mb-4">🛍️ Shop by Category</h2>
+    <ul class="nav nav-pills justify-content-center mb-4" id="categoryTabs" role="tablist">
+      <li class="nav-item">
+        <button class="nav-link active text-pink fw-bold" data-bs-toggle="pill" data-bs-target="#makeup">Makeup</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link text-pink fw-bold" data-bs-toggle="pill" data-bs-target="#skincare">Skincare</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link text-pink fw-bold" data-bs-toggle="pill" data-bs-target="#accessories">Accessories</button>
+      </li>
+      <li class="nav-item">
+  <button id="darkToggle" class="btn btn-sm btn-outline-dark">🌓 Dark Mode</button>
+</li>
+
+    </ul>
+
+    <div class="tab-content">
+       <div class="tab-pane fade show active" id="makeup">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card product-card border-0 shadow rounded-4">
+              <img src="lipstick.png" class="card-img-top" alt="lipstick">
+              <div class="card-body text-center">
+                <h5 class="card-title">Velvet Matte Lipstick</h5>
+                <p>$15 · Long-lasting glam</p>
+                <a href="#" class="btn btn-pink rounded-pill" data-bs-toggle="modal" data-bs-target="#lipstickModal">Learn More</a>
+              <button class="btn btn-outline-danger rounded-pill add-to-cart" data-product-id="1">Add to Cart</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="tab-pane fade" id="skincare">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card product-card border-0 shadow rounded-4">
+              <img src="bha-liquid.jpg" class="card-img-top" alt="HydraGlow Serum">
+              <div class="card-body text-center">
+                <h5 class="card-title">HydraGlow Serum</h5>
+                <p>$28 · Hydrating + brightening</p>
+                <a href="#" class="btn btn-pink rounded-pill" data-bs-toggle="modal" data-bs-target="#hydraglowModal">Learn More</a>
+              <button class="btn btn-outline-danger rounded-pill add-to-cart" data-product-id="2">Add to Cart</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <div class="tab-pane fade" id="accessories">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card product-card border-0 shadow rounded-4">
+              <img src="slide3.jpg" class="card-img-top" alt="Makeup Bag">
+              <div class="card-body text-center">
+                <h5 class="card-title">RoseGold Makeup Bag</h5>
+                <p>$12 · Elegant & roomy</p>
+                <a href="#" class="btn btn-pink rounded-pill" data-bs-toggle="modal" data-bs-target="#makeupBagModal">Learn More</a>
+              <button class="btn btn-outline-danger rounded-pill add-to-cart" data-product-id="3">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </section>
+  
+  <section id="skincare-showcase" class="container py-5" data-aos="fade-up">
+    <h2 class="text-center text-pink mb-5">🧴 Radiant Skincare by Top Brands</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      
+      
+      <div class="col">
+        <div class="card product-card border-0 shadow rounded-4">
+          <img src="watermelonglow.png" class="card-img-top" alt="watermelonglow">
+          <div class="card-body text-center">
+            <h5 class="card-title">Watermelon Glow Drops</h5>
+            <p class="card-text">Glow Recipe · Brightens & hydrates</p>
+             <a href="#" class="btn btn-pink rounded-pill me-2" data-bs-toggle="modal" data-bs-target="#watermelonModal">Learn More</a>
+           <button class="btn btn-outline-danger rounded-pill add-to-cart" data-product-id="4">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+    
+      <div class="col">
+        <div class="card product-card border-0 shadow rounded-4">
+          <img src="angel-moisturizer.jpg" class="card-img-top" alt="Instant Angel">
+          <div class="card-body text-center">
+            <h5 class="card-title">Instant Angel Moisturizer</h5>
+            <p class="card-text">Dieux Skin · Soothing & barrier boosting</p>
+            <a href="#" class="btn btn-pink rounded-pill" data-bs-toggle="modal" data-bs-target="#angelMoistModal">Learn More</a>
+          <button class="btn btn-outline-danger rounded-pill add-to-cart" data-product-id="5">Add to Cart</button>
+        </div>
+        </div>
+      </div>
+
+      
+      <div class="col">
+        <div class="card product-card border-0 shadow rounded-4">
+          <img src="bha-liquid.jpg" class="card-img-top" alt="BHA Exfoliant">
+          <div class="card-body text-center">
+            <h5 class="card-title">2% BHA Liquid Exfoliant</h5>
+            <p class="card-text">Paula’s Choice · Clears pores & smooths</p>
+            <a href="#" class="btn btn-pink rounded-pill me-2" data-bs-toggle="modal" data-bs-target="#bhaModal">Learn More</a>
+          <button class="btn btn-outline-danger rounded-pill add-to-cart" data-product-id="6">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  
+  <section id="testimonials" class="bg-light py-5" data-aos="zoom-in">
+    <div class="container text-center">
+      <h2 class="text-pink mb-4">💬 What Our Beauties Say</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="p-4 bg-white rounded-4 shadow">
+            <p>“My skin has never felt better! The HydraGlow Serum is pure magic.”</p>
+            <p class="fw-bold">— Aisha W., Nairobi</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="p-4 bg-white rounded-4 shadow">
+            <p>“The lipstick shades are stunning — rich and vibrant!”</p>
+            <p class="fw-bold">— Zuri M., Mombasa</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="contact" class="container py-5" data-aos="fade-up">
+    <h2 class="text-center text-pink mb-4">💌 Get in Touch</h2>
+    <form class="row gy-3 mx-auto" style="max-width:600px;">
+      <div class="form-floating">
+        <input type="text" class="form-control" id="name" placeholder="Your Name">
+        <label for="name">Your Name</label>
+      </div>
+      <div class="form-floating">
+        <input type="email" class="form-control" id="email" placeholder="you@example.com">
+        <label for="email">Email Address</label>
+      </div>
+      <div class="form-floating">
+        <textarea class="form-control" placeholder="Let’s talk beauty…" id="message" style="height: 150px;"></textarea>
+        <label for="message">Your Message</label>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-pink px-5 rounded-pill">Send Message</button>
+      </div>
+    </form>
+  </section>
+
+  <section id="cart" class="container py-5" data-aos="fade-up">
+  <h2 class="text-center text-pink mb-4">🛒 Your Cart</h2>
+  <ul id="cartItems" class="list-group mb-4"></ul>
+
+  <div class="mb-3">
+    <input type="text" class="form-control" id="checkoutName" placeholder="Your Name">
+  </div>
+  <div class="mb-3">
+    <input type="email" class="form-control" id="checkoutEmail" placeholder="Email Address">
+  </div>
+
+  <div class="text-center">
+    <button id="checkoutBtn" class="btn btn-pink rounded-pill px-5">Confirm Order</button>
+    <p id="checkoutMessage" class="mt-3 text-success fw-bold" style="display:none;">💌 Thank you! Your glam order is being processed.</p>
+  </div>
+</section>
+
+  <footer class="bg-white text-center py-4 mt-5 border-top">
+    <p class="mb-0 text-pink">© 2025 GlowSomeMore · hello@glowsomemore.com · Ruiru, Kenya</p>
+  </footer>
+
+
+  <div class="modal fade" id="lipstickModal" tabindex="-1" aria-labelledby="lipstickLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4">
+        <div class="modal-header">
+          <h5 class="modal-title text-pink fw-bold" id="lipstickLabel">Velvet Matte Lipstick 💄</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Rich pigment. Soft matte finish. All-day glam without drying out your lips.</p>
+          <ul>
+            <li>💋 Infused with shea butter & vitamin E</li>
+            <li>🎨 Available in 12 vibrant shades</li>
+            <li>🌿 Vegan & cruelty-free</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-pink rounded-pill">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="modal fade" id="hydraglowModal" tabindex="-1" aria-labelledby="hydraglowLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4">
+        <div class="modal-header">
+          <h5 class="modal-title text-pink fw-bold" id="hydraglowLabel">HydraGlow Serum 💧</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Reveal dewy radiance with our HydraGlow Serum — formulated to deeply hydrate and brighten dull skin.</p>
+          <ul>
+            <li>🌿 Hyaluronic acid + niacinamide infusion</li>
+            <li>✨ Lightweight and fast-absorbing</li>
+            <li>🐇 Cruelty-free and dermatologist-tested</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-pink rounded-pill">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="modal fade" id="makeupBagModal" tabindex="-1" aria-labelledby="makeupBagLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4">
+        <div class="modal-header">
+          <h5 class="modal-title text-pink fw-bold" id="makeupBagLabel">RoseGold Makeup Bag ✨</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Elegant, durable, and large enough to hold all your beauty essentials — meet your new glam bag.</p>
+          <ul>
+            <li>💼 Lined interior with zip compartments</li>
+            <li>🌸 RoseGold vegan leather finish</li>
+            <li>👜 Travel-ready with waterproof coating</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-pink rounded-pill">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="modal fade" id="watermelonModal" tabindex="-1" aria-labelledby="watermelonLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-4">
+      <div class="modal-header">
+        <h5 class="modal-title text-pink fw-bold" id="watermelonLabel">Watermelon Glow Drops 🍉</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Infused with juicy watermelon extract to give your skin a fresh, dewy finish. Perfect for layering under or over makeup!</p>
+        <ul>
+          <li>🌿 Naturally hydrating and brightening</li>
+          <li>✨ Leaves a glass-skin effect</li>
+          <li>🧴 Lightweight serum texture — no stickiness</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn btn-pink rounded-pill add-to-cart" data-product="Watermelon Glow Drops">Add to Cart</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  <div class="modal fade" id="angelMoistModal" tabindex="-1" aria-labelledby="angelMoistLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4">
+        <div class="modal-header">
+          <h5 class="modal-title text-pink fw-bold" id="angelMoistLabel">Instant Angel Moisturizer 👼</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>A comforting cloud of hydration that nourishes and strengthens your skin barrier instantly.</p>
+          <ul>
+            <li>🧴 Ceramides + fatty acids blend</li>
+            <li>🌼 Reduces redness & irritation</li>
+            <li>💖 Leaves skin smooth and supple all day</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-pink rounded-pill">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="modal fade" id="bhaModal" tabindex="-1" aria-labelledby="bhaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-4">
+      <div class="modal-header">
+        <h5 class="modal-title text-pink fw-bold" id="bhaLabel">2% BHA Liquid Exfoliant ✨</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>A cult-favorite chemical exfoliant that unclogs pores and smooths skin texture overnight. No scrubbing needed!</p>
+        <ul>
+          <li>🧪 Contains salicylic acid (BHA)</li>
+          <li>🌼 Minimizes blackheads and blemishes</li>
+          <li>🧴 Gentle enough for daily use</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn btn-pink rounded-pill add-to-cart" data-product="2% BHA Liquid Exfoliant">Add to Cart</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+:root {
+  --pink: #ff69b4;
+  --light-pink: #fff0f5;
+  --gradient-pink: linear-gradient(to right, #ff69b4, #ffc0cb);
+}
+body {
+  background-color: var(--light-pink);
+  color: #444;
+  position: relative;
+  z-index: 1;
+}
+h1, h2, h3 {
+  font-family: 'Cinzel Decorative', serif;
+}
+.header-bg {
+  background: var(--gradient-pink);
+  color: white;
+}
+.text-pink {
+  color: var(--pink);
+}
+#backgroundCarousel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.bg-slide {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+.carousel img {
+  height: 450px;
+  object-fit: cover;
+}
+.card-title {
+  font-weight: bold;
+  color: #e83e8c;
+}
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(3, 224, 143, 0.2);
+}
+.btn-outline-danger:hover {
+  background-color: #e83e8c;
+  color: rgb(234, 8, 155);
+  border-color: #e83e8c;
+}
+.btn-pink {
+  background-color: var(--pink);
+  color: white;
+  border: none;
+}
+.btn-pink:hover {
+  background-color: #e83e8c;
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.5);
+}
+.product-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+.modal-content {
+  border: 2px solid var(--pink);
+  box-shadow: 0 6px 20px rgba(255,105,180,0.3);
+}
+body.dark-mode {
+  background-color: #121212;
+  color: #eee;
+}
+body.dark-mode .card {
+  background-color: #1e1e1e;
+  color: #eee;
+}
+body.dark-mode .modal-content {
+  background-color: #1e1e1e;
+  color: #eee;
+  border-color: #ff69b4;
+}
+@media (max-width: 768px) {
+  .product-card img {
+    height: 200px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .btn-pink {
+    font-size: 0.9rem;
+  }
+  #navbarNav ul {
+    text-align: center;
+  }
+}
+#testimonials {
+  color: var(--pink); 
+}
